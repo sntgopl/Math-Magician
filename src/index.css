@@ -1,0 +1,13 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40vh;
+  height: 60vh;
+}
+
+button {
+  height: 10vh;
+  width: 10vw;
+  border: 1px solid black;
+}
