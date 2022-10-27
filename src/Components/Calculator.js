@@ -1,16 +1,9 @@
 import React from 'react';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-    }
-  }
-
+class Calculator extends React.PureComponent {
   render() {
     return (
-      
+
       <div className="Calculator">
         <p className="result">0</p>
         <div className="board">
@@ -35,8 +28,8 @@ class Calculator extends React.Component {
           <button type="button" className="orange">=</button>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Calculator
+export default Calculator;
