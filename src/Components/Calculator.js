@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import calculate from '../logic/calculate';
 
 class Calculator extends React.PureComponent {
