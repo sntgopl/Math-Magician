@@ -1,55 +1,49 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.clickHandler = this.clickHandler.bind(this);
-    this.state = {
-      total: 0,
-      next: null,
-      operation: null,
-    };
-  }
+const Calculator = () => {
+  const [state, clickState] = useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
 
-  clickHandler(e) {
-    this.setState((state) => calculate(state, e.target.textContent));
-  }
+  const clickHandler = (e) => {
+    clickState(calculate(state, e.target.textContent));
+  };
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
+  const { total, next, operation } = state;
+  return (
 
-      <div className="Calculator">
-        <p className="result">
-          {total}
-          {operation}
-          {next}
-        </p>
-        <div className="board">
-          <button type="button" onClick={this.clickHandler}>AC</button>
-          <button type="button" onClick={this.clickHandler}>+/-</button>
-          <button type="button" onClick={this.clickHandler}>%</button>
-          <button type="button" onClick={this.clickHandler} className="orange">÷</button>
-          <button type="button" onClick={this.clickHandler}>7</button>
-          <button type="button" onClick={this.clickHandler}>8</button>
-          <button type="button" onClick={this.clickHandler}>9</button>
-          <button type="button" onClick={this.clickHandler} className="orange">x</button>
-          <button type="button" onClick={this.clickHandler}>4</button>
-          <button type="button" onClick={this.clickHandler}>5</button>
-          <button type="button" onClick={this.clickHandler}>6</button>
-          <button type="button" onClick={this.clickHandler} className="orange">-</button>
-          <button type="button" onClick={this.clickHandler}>1</button>
-          <button type="button" onClick={this.clickHandler}>2</button>
-          <button type="button" onClick={this.clickHandler}>3</button>
-          <button type="button" onClick={this.clickHandler} className="orange">+</button>
-          <button type="button" onClick={this.clickHandler} className="btn0">0</button>
-          <button type="button" onClick={this.clickHandler}>.</button>
-          <button type="button" onClick={this.clickHandler} className="orange">=</button>
-        </div>
+    <div className="Calculator">
+      <p className="result">
+        {total}
+        {operation}
+        {next}
+      </p>
+      <div className="board">
+        <button type="button" onClick={clickHandler}>AC</button>
+        <button type="button" onClick={clickHandler}>+/-</button>
+        <button type="button" onClick={clickHandler}>%</button>
+        <button type="button" onClick={clickHandler} className="orange">÷</button>
+        <button type="button" onClick={clickHandler}>7</button>
+        <button type="button" onClick={clickHandler}>8</button>
+        <button type="button" onClick={clickHandler}>9</button>
+        <button type="button" onClick={clickHandler} className="orange">x</button>
+        <button type="button" onClick={clickHandler}>4</button>
+        <button type="button" onClick={clickHandler}>5</button>
+        <button type="button" onClick={clickHandler}>6</button>
+        <button type="button" onClick={clickHandler} className="orange">-</button>
+        <button type="button" onClick={clickHandler}>1</button>
+        <button type="button" onClick={clickHandler}>2</button>
+        <button type="button" onClick={clickHandler}>3</button>
+        <button type="button" onClick={clickHandler} className="orange">+</button>
+        <button type="button" onClick={clickHandler} className="btn0">0</button>
+        <button type="button" onClick={clickHandler}>.</button>
+        <button type="button" onClick={clickHandler} className="orange">=</button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Calculator;
