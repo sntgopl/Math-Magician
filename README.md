@@ -19,6 +19,10 @@ React.
 Welcome to our Math-Magician! Working with new methodology por interactive UI, using React library. Creating components to build a combination of buttons to create a Calculator.
 To get a local copy up and running please download the zip file or clone it via git
 
+# Demo
+
+[Click here](https://sntgopl.github.io/math-magician/dist)
+
 
 ### Clone and review it
 
