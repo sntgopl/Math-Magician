@@ -1,18 +1,24 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import {
+  Routes, Route, Link,
+} from 'react-router-dom';
 import Calculator from './Components/Calculator';
 import './app.css';
 
+function NavBar() {
+  return (
+    <nav>
+      <h1>Math Magician</h1>
+      <Link to="/">Home</Link>
+      <Link to="/about">Calculator</Link>
+      <Link to="/quotes">Quotes</Link>
+    </nav>
+  );
+}
 function Home() {
   return (
     <div className="HomePage">
-      <nav>
-        <h1>Math Magician</h1>
-        <Link to="/">Home</Link>
-        <Link to="/about">Calculator</Link>
-        <Link to="/quotes">Quotes</Link>
-      </nav>
       <main className="HomeInfo">
         <h2 className="HomeTitle">Welcome to the homepage!</h2>
         <p className="HomeText">
@@ -31,12 +37,6 @@ function Home() {
 function About() {
   return (
     <div className="AboutPage">
-      <nav>
-        <h1>Math Magician</h1>
-        <Link to="/">Home</Link>
-        <Link to="/about">Calculator</Link>
-        <Link to="/quotes">Quotes</Link>
-      </nav>
       <main className="AboutInfo">
         <h2 className="AboutTitle">Let`s do some Math!</h2>
         <Calculator />
@@ -48,12 +48,6 @@ function About() {
 function Quotes() {
   return (
     <div className="QuotesPage">
-      <nav>
-        <h1>Math Magician</h1>
-        <Link to="/">Home</Link>
-        <Link to="/about">Calculator</Link>
-        <Link to="/quotes">Quotes</Link>
-      </nav>
       <main className="QuotesInfo">
         <h2 className="QuotesTitle">Daily Quote</h2>
         <p className="Quote">If you can`t explain it simply, you don`t understand it well enough. - Albert Einstein</p>
@@ -65,6 +59,7 @@ function Quotes() {
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -74,4 +69,6 @@ function App() {
   );
 }
 
-export default App;
+export {
+  App, Home, About, Quotes, NavBar,
+};
