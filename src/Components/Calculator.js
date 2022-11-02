@@ -14,7 +14,6 @@ const Calculator = () => {
 
   const { total, next, operation } = state;
   return (
-
     <div className="Calculator">
       <p className="result">
         {total}
