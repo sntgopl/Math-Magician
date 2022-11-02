@@ -13,7 +13,7 @@ describe('should carry out operation given by the object', () => {
     const result = operate(3, 0, '÷');
     expect(result).toBe("Can't divide by 0.");
   });
- /* test('should return Error: unkown operator', () => {
+/* test('should return Error: unkown operator', () => {
   const operation = 'v';
   const result = operate(3, 0, operation);
     expect(result).toBe("Unknown operation 'v'");
