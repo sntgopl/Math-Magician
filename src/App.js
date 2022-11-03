@@ -10,9 +10,9 @@ function NavBar() {
   return (
     <nav>
       <h1>Math Magician</h1>
-      <Link to="/">Home</Link>
-      <Link to="/about">Calculator</Link>
-      <Link to="/quotes">Quotes</Link>
+      <Link to="/" data-testid="home">Home</Link>
+      <Link to="/about" data-testid="Calculator">Calculator</Link>
+      <Link to="/quotes" data-testid="Quotes">Quotes</Link>
     </nav>
   );
 }
