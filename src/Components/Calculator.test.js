@@ -37,7 +37,7 @@ describe('Test If a user click a button on the Calculator  the display should Up
     expect(screen.getByText(/63\x8/i)).toBeInTheDocument();
   });
 
-  it('If a user click 63, +, and 8 button the Calculator Screen displays 63 + 8', () => {
+  it('If a user click 6, x, 8 and then = button the Calculator Screen displays 48', () => {
     render(<Calculator />);
     userEvent.click(screen.getByRole('button', { name: /6/i }));
     userEvent.click(screen.getByRole('button', { name: /x/i }));
