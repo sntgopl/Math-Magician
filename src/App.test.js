@@ -1,11 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom/extend-expect';
-import { render } from '@testing-library/react';
-import { screen } from '@testing-library/dom';
-import userEvent from '@testing-library/user-event';
 import {
-  Home, About, Quotes, NavBar,
+  Home, About, Quotes,
 } from './App';
 
 it('renders correctly', () => {
