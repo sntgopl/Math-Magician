@@ -21,7 +21,7 @@ To get a local copy up and running please download the zip file or clone it via 
 
 # Demo
 
-[Click here](https://sntgopl.github.io/math-magician/dist)
+[Click here](https://mathician.netlify.app/)
 
 
 ### Clone and review it
