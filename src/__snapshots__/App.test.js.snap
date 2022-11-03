@@ -38,13 +38,16 @@ exports[`renders correctly 2`] = `
     >
       <p
         className="result"
+        data-testid="display"
       >
+         
         0
       </p>
       <div
         className="board"
       >
         <button
+          data-testid="AC"
           onClick={[Function]}
           type="button"
         >

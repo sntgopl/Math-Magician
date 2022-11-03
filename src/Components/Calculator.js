@@ -15,13 +15,14 @@ const Calculator = () => {
   const { total, next, operation } = state;
   return (
     <div className="Calculator">
-      <p className="result">
+      <p className="result" data-testid="display">
+        {' '}
         {total}
         {operation}
         {next}
       </p>
       <div className="board">
-        <button type="button" onClick={clickHandler}>AC</button>
+        <button type="button" onClick={clickHandler} data-testid="AC">AC</button>
         <button type="button" onClick={clickHandler}>+/-</button>
         <button type="button" onClick={clickHandler}>%</button>
         <button type="button" onClick={clickHandler} className="orange">÷</button>
